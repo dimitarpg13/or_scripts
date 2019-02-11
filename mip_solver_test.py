@@ -12,7 +12,7 @@ def main():
     constraint1.SetCoefficient(y, 7)
 
     constraint2 = solver.Constraint(-solver.infinity(), 3.5)
-    constraint2.SetCoeffcient(x, 1)
+    constraint2.SetCoefficient(x, 1)
     constraint2.SetCoefficient(y, 0)
 
     objective = solver.Objective()
@@ -24,7 +24,7 @@ def main():
     """Solve problem and print solution"""
     result_status = solver.Solve()
 
-    assert result_status = pywraplp.Solver.OPTIMAL
+    assert result_status == pywraplp.Solver.OPTIMAL
 
     assert solver.VerifySolution(1e-7, True)
 
